@@ -29,3 +29,14 @@ it("sets the selectedSubreddit prop as the `value` prop on the Picker component"
   const PickerComponent = wrapper.find(Picker);
   expect(PickerComponent.props().value).toBe(props.selectedSubreddit);
 });
+
+it("renders the Refresh button when the isFetching prop is false", () => {
+  const props = {
+    isFetching: false,
+    dispatch: jest.fn(),
+    selectedSubreddit: "reactjs",
+    posts: [],
+  };
+  const wrapper = shallow(<App {...props} />);
+  expect(wrapper.find("button").length).toBe(1);
+});
