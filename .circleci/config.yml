@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  node: circleci/node@2.1.1
+  node: circleci/node@5.0.2
 jobs:
   build-and-test:
     docker:
@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - node/install:
-          node-version: lts/erbium
+          node-version: '12.22'
       - run: node --version
 workflows:
   build-and-test:
