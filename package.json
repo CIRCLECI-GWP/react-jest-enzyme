@@ -8,6 +8,7 @@
     "enzyme-to-json": "^3.6.2",
     "fetch-mock": "^9.11.0",
     "node-fetch": "^3.2.4",
+    "prettier": "^2.6.2",
     "react-scripts": "^2.0.2",
     "redux-mock-store": "^1.5.4"
   },
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "react-scripts test --env=jsdom --verbose"
+    "test": "react-scripts test --env=jsdom --verbose",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
   "jest": {
     "snapshotSerializers": [
